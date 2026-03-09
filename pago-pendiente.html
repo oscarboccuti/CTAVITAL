@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pago pendiente — Cristian Torres CTVital</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/jpeg" href="img/logo_osqui.jpeg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .status-hero {
+      text-align: center;
+      padding: 6rem 1.5rem;
+    }
+    .status-icon { font-size: 4rem; margin-bottom: 1rem; display: block; }
+    .status-hero h1 { color: #d97706; } /* amarillo/naranja para pendiente */
+    .status-hero p { max-width: 500px; margin: 1rem auto; color: var(--color-text-light); }
+    .actions { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo_osqui.jpeg" alt="Logo CTVital" />
+        <div class="logo-text">Cristian Torres <span>CTVital</span></div>
+      </a>
+    </div>
+  </header>
+
+  <div class="status-hero container">
+    <span class="status-icon">⏳</span>
+    <h1>Pago pendiente</h1>
+    <p>
+      Tu pago está siendo procesado. Esto puede tardar algunas horas.
+      Recibirás una confirmación por email cuando se acredite.
+    </p>
+    <p>
+      Una vez confirmado, podrás agendar tu sesión.
+      Si tenés dudas, contactanos por WhatsApp.
+    </p>
+    <div class="actions">
+      <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+      <!-- EDITAR: reemplazá con tu número de WhatsApp -->
+      <a
+        href="https://wa.me/34653065171?text=Hola%20Cristian%2C%20mi%20pago%20quedó%20pendiente"
+        class="btn"
+        style="background: var(--color-light); color: #25D366; border: 2px solid #25D366; display:inline-flex; align-items:center; gap:0.5rem;"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="img/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(62%) sepia(72%) saturate(450%) hue-rotate(95deg) brightness(95%) contrast(95%);" />
+        Consultar por WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Cristian Torres — CTVital · <a href="index.html">Volver al inicio</a></p>
+  </footer>
+
+</body>
+</html>

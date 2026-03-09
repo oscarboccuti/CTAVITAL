@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gracias — Cristian Torres CTVital</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/jpeg" href="img/logo_osqui.jpeg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .gracias-hero {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      color: white;
+      text-align: center;
+      padding: 5rem 1.5rem 3rem;
+    }
+    .gracias-hero h1 { color: white; font-size: 2.2rem; }
+    .gracias-hero p  { color: rgba(255,255,255,0.85); max-width: 500px; margin: 1rem auto 0; }
+    .checkmark { font-size: 4rem; margin-bottom: 1rem; display: block; }
+
+    .calendly-section {
+      padding: 3rem 1.5rem;
+      background: var(--color-light);
+    }
+    .calendly-section h2 { text-align: center; margin-bottom: 0.5rem; }
+    .calendly-section > p { text-align: center; margin-bottom: 2rem; color: var(--color-text-light); }
+
+    /* Widget de Calendly */
+    .calendly-inline-widget {
+      min-width: 320px;
+      max-width: 860px;
+      margin: 0 auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(30,58,138,0.1);
+    }
+
+    /* Modal comprobante */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .modal-overlay.visible {
+      display: flex;
+    }
+    .modal {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      max-width: 460px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      animation: modal-in 0.25s ease;
+    }
+    @keyframes modal-in {
+      from { transform: scale(0.92); opacity: 0; }
+      to   { transform: scale(1);    opacity: 1; }
+    }
+    .modal-icon { font-size: 3rem; margin-bottom: 0.75rem; display: block; }
+    .modal h2 { font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--color-primary); }
+    .modal p  { color: var(--color-text-light); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .modal-btn-wp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #25D366;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .modal-btn-wp:hover { background: #1ebe5d; color: white; transform: translateY(-2px); }
+    .modal-btn-wp img { width: 22px; height: 22px; filter: brightness(0) invert(1); }
+    .modal-close {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      cursor: pointer;
+      background: none;
+      border: none;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header mínimo -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo_osqui.jpeg" alt="Logo CTVital" />
+        <div class="logo-text">Cristian Torres <span>CTVital</span></div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Mensaje de éxito -->
+  <div class="gracias-hero">
+    <span class="checkmark">🙌</span>
+    <h1>¡Gracias por tu pago!</h1>
+    <p>
+      Ya podés reservar tu sesión de Acompañamiento Vital.<br>
+      Elegí el día y horario que más te convenga.
+    </p>
+  </div>
+
+  <!-- Calendly embed -->
+  <section class="calendly-section">
+    <div>
+      <h2>Elegí tu turno</h2>
+      <p>Seleccioná la fecha y hora que más te convenga.</p>
+
+      <!--
+        CALENDLY EMBED
+        ===========================================
+        Reemplazá "REEMPLAZAR_CON_TU_URL_CALENDLY"
+        con tu URL real de Calendly.
+        Ejemplo: https://calendly.com/cristian-torres/sesion-60min
+
+        Ver tutorial: docs/calendly-tutorial.md
+        ===========================================
+      -->
+      <div
+        class="calendly-inline-widget"
+        data-url="REEMPLAZAR_CON_TU_URL_CALENDLY"
+        style="height:700px;"
+      ></div>
+
+      <script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        type="text/javascript"
+        async
+      ></script>
+
+    </div>
+  </section>
+
+  <!-- Modal: enviar comprobante por WhatsApp -->
+  <div class="modal-overlay" id="modal-comprobante">
+    <div class="modal">
+      <span class="modal-icon">🎉</span>
+      <h2>¡Turno agendado!</h2>
+      <p>
+        Para <strong>confirmar tu sesión</strong>, enviá el comprobante
+        de pago por WhatsApp a Cristian Torres.
+      </p>
+      <!-- EDITAR: reemplazá con tu número real -->
+      <a
+        href="https://wa.me/34653065171?text=Hola%20Cristian%2C%20acabo%20de%20agendar%20mi%20sesi%C3%B3n%20y%20te%20env%C3%ADo%20el%20comprobante%20de%20pago."
+        class="modal-btn-wp"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="img/icons/whatsapp.svg" alt="" />
+        Enviar comprobante
+      </a>
+      <button class="modal-close" id="modal-close">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    // Escucha el evento de Calendly cuando el turno es confirmado
+    window.addEventListener('message', function(e) {
+      if (e.data.event === 'calendly.event_scheduled') {
+        document.getElementById('modal-comprobante').classList.add('visible');
+      }
+    });
+
+    document.getElementById('modal-close').addEventListener('click', function() {
+      document.getElementById('modal-comprobante').classList.remove('visible');
+    });
+  </script>
+
+  <footer>
+    <p>© 2026 Cristian Torres — CTVital · <a href="index.html">Volver al inicio</a></p>
+  </footer>
+
+</body>
+</html>

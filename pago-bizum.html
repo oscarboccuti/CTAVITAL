@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pago por Bizum — Cristian Torres CTVital</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/jpeg" href="img/logo_osqui.jpeg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .bizum-page {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem;
+      text-align: center;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      text-align: left;
+      background: var(--color-light);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--color-secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .step-content h3 {
+      font-size: 1rem;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .step-content p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      margin: 0;
+    }
+
+    .bizum-numero {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: 0.05em;
+      display: block;
+      margin-top: 0.4rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .btn-wp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: #25D366;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.9rem 1.75rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-wp:hover {
+      background: #1ebe5d;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-wp img {
+      width: 22px;
+      height: 22px;
+      filter: brightness(0) invert(1);
+    }
+
+    .btn-calendly {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: var(--color-secondary);
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.9rem 1.75rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-calendly:hover {
+      background: var(--color-primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .nota {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      margin-top: 1.25rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo_osqui.jpeg" alt="Logo CTVital" />
+        <div class="logo-text">Cristian Torres <span>CTVital</span></div>
+      </a>
+    </div>
+  </header>
+
+  <div class="bizum-page">
+
+    <h1>Reservar sesión · Europa</h1>
+    <p style="color: var(--color-text-light); margin-bottom: 2rem;">
+      Seguí estos tres pasos para confirmar tu sesión.
+    </p>
+
+    <!-- Paso 1 -->
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Transferí 20 € por Bizum</h3>
+        <p>
+          Enviá el pago al número:
+          <!-- EDITAR: reemplazá con el número real de Bizum -->
+          <span class="bizum-numero">+34 653 065 171</span>
+          Sesión online · 60 minutos
+        </p>
+      </div>
+    </div>
+
+    <!-- Paso 2 -->
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Enviá el comprobante por WhatsApp</h3>
+        <p>Mandá una captura del pago para que Cristian pueda confirmar tu reserva.</p>
+      </div>
+    </div>
+
+    <!-- Paso 3 -->
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Agendá tu sesión en Calendly</h3>
+        <p>Una vez enviado el comprobante, elegí el día y horario que más te convenga.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <!-- EDITAR: reemplazá con tu número real de WhatsApp -->
+      <a
+        href="https://wa.me/34653065171?text=Hola%20Cristian%2C%20acabo%20de%20hacer%20el%20pago%20por%20Bizum%20y%20te%20env%C3%ADo%20el%20comprobante."
+        class="btn-wp"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="img/icons/whatsapp.svg" alt="" />
+        Enviar comprobante por WhatsApp
+      </a>
+
+      <a href="gracias.html" class="btn-calendly">
+        📅 Agendar sesión
+      </a>
+    </div>
+
+    <p class="nota">
+      Cristian confirmará tu sesión una vez verificado el pago.<br>
+      ¿Dudas? Escribile por WhatsApp antes de pagar.
+    </p>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Cristian Torres — CTVital · <a href="index.html">Volver al inicio</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
