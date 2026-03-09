@@ -21,3 +21,9 @@ if (menuToggle && navMenu) {
 window.addEventListener('scroll', () => {
   if (navMenu) navMenu.classList.remove('open');
 });
+
+// ---- Mercado Pago: switch sandbox ----
+const btnPago = document.getElementById('btn-pago');
+if (btnPago && new URLSearchParams(window.location.search).get('env') === 'sandbox') {
+  btnPago.href = 'https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=425929776-0c58f0fc-3658-4d68-a7fd-c5c7f0930ed0';
+}
